@@ -1,0 +1,10 @@
+<h1>登録画面</h1>
+<%= form_for @user, url: { action: :create } do |f| %>
+    <%= label_tag :uid, 'ユーザーID' %>
+    <%= text_field_tag :uid %>
+    <%= label_tag :pass, 'パスワード' %>
+    <%= password_field_tag :pass %>
+    <%= label_tag :age, '年齢' %>
+    <%= text_field_tag :age %>
+    <%= submit_tag '登録' %>
+<% end %>
