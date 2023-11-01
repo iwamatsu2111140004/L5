@@ -25,7 +25,7 @@ production:
   adapter: postgresql
   encoding: unicode
   pool:5
-  database: l4_cs3_aaa
-  username: l4_cs3_aaa_user
+  database: l5_o7vm
+  username: l5_o7vm_user
   password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
