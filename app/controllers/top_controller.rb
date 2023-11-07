@@ -9,7 +9,7 @@ class TopController < ApplicationController
     if user && BCrypt::Password.new(user.pass) == params[:pass]
       session[:login_uid] = params[:uid]
       @tweets = Tweet.all
-      redirect_to tweets_path
+      redirect_to root_path
     else
       render "login"
     end

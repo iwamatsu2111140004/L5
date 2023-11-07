@@ -2,8 +2,16 @@
 <%= form_for @user, url: { action: :create } do |f| %>
     <%= label_tag :uid, 'ユーザーID' %>
     <%= text_field_tag :uid %>
-    <%= label_tag :pass, 'パスワード' %>
-    <%= password_field_tag :pass %>
+    <!--%= label_tag :pass, 'パスワード' %>
+    <!--%= password_field_tag :pass %-->
+    <p>
+        <%= f.label :password, 'パスワード' %>
+        <%= f.password_field :password %>
+    </p>
+    <p>
+        <%= f.label :password_confirmation, 'パスワード(確認)' %>
+        <%= f.password_field :password_confirmation %>
+    </p>
     <%= label_tag :age, '年齢' %>
     <%= text_field_tag :age %>
     <%= submit_tag '登録' %>

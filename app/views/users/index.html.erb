@@ -2,13 +2,13 @@
 
 <% @users.each do |user| %>
   <p>
-      UID:<%= user.uid %>&nbsp;
-      PASS:<%= user.pass %>&nbsp;
+      UID:<%= user.uid %>
+      PASS:<%= user.pass %>
       AGE:<%= user.age %>
       <%= link_to '削除', user_path(user), data: { turbo_method: :delete} %>
   </p>
 <% end %>
 
-<%= link_to "新規登録", new_user_path%>
-    
-    
+<p><%= link_to "新規登録", new_user_path%></p>
+<hr>
+<%= link_to "ツイート一覧", tweets_path%>
